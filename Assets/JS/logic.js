@@ -13,7 +13,8 @@ var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 
 // sound effects
-
+var sfxRight = new Audio("assets/sfx/correct.wav");
+var sfxWrong = new Audio("assets/sfx/incorrect.wav");
 
 function startQuiz() {
   let startScreenEl = document.getElementById("start-screen");
@@ -72,11 +73,12 @@ function questionClick() {
     timerEl.textContent = time;
 
     // play "wrong" sound effect
-   
+    sfxWrong.play();
 
     feedbackEl.textContent = "Wrong!";
   } else {
     // play "right" sound effect
+    sfxRight.play();
     
 
     feedbackEl.textContent = "Correct!";
