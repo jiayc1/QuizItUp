@@ -83,9 +83,8 @@ function questionClick() {
   }
 
   // flash right/wrong feedback on page for half a second
-  feedbackEl.classList.add('feedback');
+  feedbackEl.classList.remove('hide');
   setTimeout(function() {
-    feedbackEl.classList.add('feedback');
     feedbackEl.classList.add('hide');
   }, 1000);
 
