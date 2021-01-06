@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "en"> 
+    <head>
+        <meta charset ="UTF-8"/>
+        <meta name="viewport" content="width=dev-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <strong>
+            <title>
+                (Coding) Quiz It Up
+            </title>
+        </strong>
+        
+        <link rel= "stylesheet" href="./Assets/CSS/style.css"/>
+    </head>
+
+    
+<body>
+    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+
+    <div class="timer">Time: <span id="time">0</span></div>
+
+    <div class="wrap">
+        <div id="start-screen" class ="start">
+            <h1> Coding Quiz It Up Challenge</h1>
+            <p>
+                Ready to do this quiz? Answer these code-related questions. Make sure to 
+                realize that if you answer a question incorrectly, we will penalize your score and time by five seconds!
+            </p>
+            <button id="start">Start Quiz</button>
+        </div>
+        <div id="questions" class="hide">
+            <h2 id="question-title"></h2>
+            <div id="choices" class="choices"></div>
+        </div>
+
+        <div id="end-screen" class="hide">
+            <h2>Quiz is done!</h2>
+            <p>
+                Your score is <span id="final-score"></span>
+            </p>
+            <p> 
+                Enter your Initials: <input type="text" id="initials" max="3" />
+                <button id="submit">Submit</button>
+            </p>
+        </div>
+
+        <div id="feedback" class="feedback hide"></div>
+    </div>
+
+    <script src="./Assets/JS/questions.js"></script>
+    <script src="./Assets/JS/logic.js"></script>
+
+</body>
+</html>
